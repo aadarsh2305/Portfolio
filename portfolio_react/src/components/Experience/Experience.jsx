@@ -1,11 +1,25 @@
 import React from "react";
-import { RiNetflixFill } from "react-icons/ri";
-import { FaJava, FaHtml5, FaCss3, FaReact, FaJs, FaJenkins, FaDocker, FaNodeJs } from "react-icons/fa";
-import { SiMongodb, SiPostgresql, SiPostman, SiTailwindcss, SiHibernate, SiSpring, SiMysql } from "react-icons/si";
-import AixtorLogo from '../../assets/Images/AixtorLogo.png'
-import ProlificsLogo from '../../assets/Images/ProlificsLogo.jfif'
-
-
+import {
+  FaJava,
+  FaHtml5,
+  FaCss3,
+  FaReact,
+  FaJs,
+  FaJenkins,
+  FaDocker,
+  FaNodeJs,
+} from "react-icons/fa";
+import {
+  SiMongodb,
+  SiPostgresql,
+  SiPostman,
+  SiTailwindcss,
+  SiHibernate,
+  SiSpring,
+  SiMysql,
+} from "react-icons/si";
+import AixtorLogo from "../../assets/Images/AixtorLogo.png";
+import ProlificsLogo from "../../assets/Images/ProlificsLogo.jfif";
 
 const Experience = () => {
   return (
@@ -61,31 +75,37 @@ const Experience = () => {
         </div>
         <div>
           <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg p-4 items-center">
-            <img src={ProlificsLogo} alt="Prolifics Logo" className="w-12 h-12" />
+            <img
+              src={ProlificsLogo}
+              alt="Prolifics Logo"
+              className="w-12 h-12"
+            />
             <span className="text-white">
-                <h2 className="leading-tight">Associate Software Engineer, Prolifics</h2>
-                <p className="text-sm leading-tight font-thin">
+              <h2 className="leading-tight">
+                Associate Software Engineer, Prolifics
+              </h2>
+              <p className="text-sm leading-tight font-thin">
                 July 2023 - Present
-                </p>
-                <ul className="text-sm p-2">
+              </p>
+              <ul className="text-sm p-2">
                 <li>- Working as software engineer</li>
                 <li>- SDE-developer</li>
-                </ul>
+              </ul>
             </span>
-            </div>
-            <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg p-4 items-center">
+          </div>
+          <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg p-4 items-center">
             <img src={AixtorLogo} alt="Aixtor Logo" className="w-12 h-12" />
             <span className="text-white">
-                <h2 className="leading-tight">Java Developer, Aixtor</h2>
-                <p className="text-sm leading-tight font-thin">
+              <h2 className="leading-tight">Java Developer, Aixtor</h2>
+              <p className="text-sm leading-tight font-thin">
                 Dec 2022 - May 2023
-                </p>
-                <ul className="text-sm p-2">
+              </p>
+              <ul className="text-sm p-2">
                 <li>- Worked as java developer.</li>
                 <li>- Liferay and Spring Framework</li>
-                </ul>
+              </ul>
             </span>
-            </div>
+          </div>
         </div>
       </div>
     </div>
