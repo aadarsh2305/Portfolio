@@ -2,6 +2,7 @@ import React from 'react'
 import ProjectCard from './ProjectCard'
 import disneyLogo from '../../assets/Images/Disney-clone.png'
 import employeeLogo from '../../assets/Images/employee-management-system-pic.jpg'
+import portfolio from '../../assets/Images/Portfolio.png'
 
 const Projects = () => {
   return (
@@ -15,13 +16,13 @@ const Projects = () => {
         />
         <ProjectCard
           title="Employee Management System"
-          main="this is a Full stack project created in React js, Java, SpringBoot and MYSQL"
+          main="This is a Full stack project created in React js, Java, SpringBoot and MYSQL"
           ProjectLogo={employeeLogo}
         />
         <ProjectCard
-          title="Netflix Clone"
-          main="this is a blogging website created this ijsdjf l in next js and used some component library used some component library"
-          ProjectLogo={disneyLogo}
+          title="Portfolio Project"
+          main="This portfolio website is built with React.js, Vite, Node.js, and TailwindCSS, showcasing my work and skills with a modern, responsive design."
+          ProjectLogo={portfolio}
         />
       </div>
     </div>
