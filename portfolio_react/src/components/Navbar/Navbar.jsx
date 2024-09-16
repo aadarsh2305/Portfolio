@@ -6,6 +6,11 @@ const Navbar = () => {
   const [menu, setMenu] = useState(false);
   const [showMenu, setShowMenu] = useState(true);
 
+  const toggleMenu = ()=>{
+      setMenu(!menu);
+      setShowMenu(!showMenu);
+  }
+
   return (
     <nav className="flex flex-wrap justify-between md:items-center text-white px-10 pt-6 md:px-20">
       <span className="text-xl font-bold tracking-wide">Portfolio</span>
@@ -44,15 +49,13 @@ const Navbar = () => {
         <RiMenu2Line
           size={30}
           className="md:hidden absolute right-10 top-6 transition-all duration-300"
-          onClick={() => {
-            setMenu(!menu);
-            setShowMenu(!showMenu);
-          }}
+          onClick={toggleMenu}
         />
       ) : (
         <RiCloseLine
           size={30}
           className="md:hidden absolute right-10 top-6 transition-all duration-300"
+          onClick={toggleMenu}
         />
       )}
     </nav>
