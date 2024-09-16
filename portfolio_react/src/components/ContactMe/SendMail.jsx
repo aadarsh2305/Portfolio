@@ -24,7 +24,7 @@ const SendMail = () => {
     setIsSending(true);
     setError(null);
 
-    fetch('http://localhost:5000/send', {
+    fetch('https://portfolio-backend-neon-six.vercel.app/send', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
