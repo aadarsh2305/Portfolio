@@ -26,7 +26,7 @@ const SendMail = () => {
     setError(null);
 
     try {
-      const response = await axios.post('http://localhost:5000/send', formData, {
+      const response = await axios.post('https://aadarsh-folio-backend.vercel.app/send', formData, {
         headers: {
           'Content-Type': 'application/json',
         },
