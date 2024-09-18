@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const SendMail = () => {
   const [formData, setFormData] = useState({
@@ -19,35 +20,33 @@ const SendMail = () => {
     }));
   };
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
     setIsSending(true);
     setError(null);
 
-    fetch('https://portfolio-backend-neon-six.vercel.app/send', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    })
-      .then((response) => {
-        if (response.ok) {
-          setIsSending(false);
-          setIsSent(true);
-          setFormData({
-            name: '',
-            email: '',
-            message: '',
-          });
-        } else {
-          throw new Error('Failed to send email');
-        }
-      })
-      .catch((error) => {
-        setIsSending(false);
-        setError(error.message);
+    try {
+      const response = await axios.post('http://localhost:5000/send', formData, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
       });
+
+      if (response.status === 200) {
+        setIsSending(false);
+        setIsSent(true);
+        setFormData({
+          name: '',
+          email: '',
+          message: '',
+        });
+      } else {
+        throw new Error('Failed to send email');
+      }
+    } catch (error) {
+      setIsSending(false);
+      setError(error.response?.data?.message || error.message);
+    }
   };
 
   return (
