@@ -13,16 +13,22 @@ const Projects = () => {
           title="Disney-clone Website"
           main="This is a Disney website created in React js, Vite and TailwindCSS"
           ProjectLogo={disneyLogo}
+          DemoLink="https://disney-clone-addy.vercel.app/"
+          SourceCode="https://github.com/aadarsh2305/Disney-clone"
         />
         <ProjectCard
           title="Employee Management System"
           main="This is a Full stack project created in React js, Java, SpringBoot and MYSQL"
           ProjectLogo={employeeLogo}
+          DemoLink=""
+          SourceCode="https://github.com/aadarsh2305/Employee-management-system"
         />
         <ProjectCard
           title="Portfolio Project"
           main="This portfolio website is built with React.js, Vite, Node.js, and TailwindCSS, showcasing my work and skills with a modern, responsive design."
           ProjectLogo={portfolio}
+          DemoLink="https://aadarsh-folio.vercel.app/"
+          SourceCode="https://github.com/aadarsh2305/Portfolio"
         />
       </div>
     </div>
