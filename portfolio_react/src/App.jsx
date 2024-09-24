@@ -19,7 +19,7 @@ function App() {
       <Projects />
       <ContactMe />
       <Footer />                    
-      <ScrollToTop smooth className="rounded-full mr-[-20px] p-1.5 items-center justify-center shadow-md transition-all duration-300 hover:bg-[#f7f8f9] hover:scale-105" style={{backgroundColor : "#1395ff"}} />
+      <ScrollToTop smooth className="rounded-full mr-[-20px] p-1.5 items-center justify-center shadow-md transition-all duration-300 hover:bg-[#f7f8f9] hover:scale-105" style={{backgroundColor :"#1395ff", borderRadius:"50%"}}/>
     </div>
   )
 }
