@@ -24,14 +24,14 @@ const SendMail = () => {
     e.preventDefault();
     setIsSending(true);
     setError(null);
-
+  
     try {
       const response = await axios.post('https://aadarsh-folio-backend.vercel.app/send', formData, {
         headers: {
           'Content-Type': 'application/json',
         },
       });
-
+  
       if (response.status === 200) {
         setIsSending(false);
         setIsSent(true);
@@ -48,6 +48,7 @@ const SendMail = () => {
       setError(error.response?.data?.message || error.message);
     }
   };
+  
 
   return (
     <form onSubmit={sendEmail} className="bg-[#465697] p-6 rounded-lg shadow-md space-y-4">
