@@ -19,7 +19,7 @@ To run this project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/portfolio.git
+   git clone https://github.com/aadarsh2305/Portfolio.git
    ```
 
 2. Navigate to the project directory:
@@ -48,16 +48,16 @@ Feel free to reach out to me through the contact form in the portfolio or direct
 Here are some screenshots of my portfolio:
 
 1. **Home Page**
-   ![Home Page](https://via.placeholder.com/800x400.png?text=Home+Page)
+   ![Home Page](./portfolio_react/src/assets/Images/Portfolio.png)
 
-2. **Skills Section**
-   ![Skills Section](https://via.placeholder.com/800x400.png?text=Skills+Section)
+2. **Skills and Experience Section**
+   ![Skills Section](./portfolio_react/src/assets/Images/Skills_SS.png)
 
-3. **Experience Section**
-   ![Experience Section](https://via.placeholder.com/800x400.png?text=Experience+Section)
+3. **Projects Section**
+   ![Projects Section](./portfolio_react/src/assets/Images/Projects_SS.png)
 
 4. **Contact Form**
-   ![Contact Form](https://via.placeholder.com/800x400.png?text=Contact+Form)
+   ![Contact Form](./portfolio_react/src/assets/Images/Contact_SS.png)
 
 Feel free to explore the project to see these features in action!
 
