@@ -54,7 +54,7 @@ function App() {
       <Home darkMode={darkMode}/>
       <About darkMode={darkMode}/>
       <Experience darkMode={darkMode}/>
-      <Projects />
+      <Projects darkMode={darkMode}/>
       <ContactMe />
       <Footer />
 
