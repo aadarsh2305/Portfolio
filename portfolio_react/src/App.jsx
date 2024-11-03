@@ -52,7 +52,7 @@ function App() {
 
       <Navbar darkMode={darkMode}/>
       <Home darkMode={darkMode}/>
-      <About />
+      <About darkMode={darkMode}/>
       <Experience />
       <Projects />
       <ContactMe />
