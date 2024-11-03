@@ -36,27 +36,36 @@ function App() {
   };
 
   return (
-    <div className={`h-auto w-full overflow-hidden ${darkMode ? "bg-[#171d32]" : "bg-[#f7f8f9]"}`}>
+    <div
+      className={`h-auto w-full overflow-hidden ${
+        darkMode ? "bg-[#171d32] text-white" : "bg-[#f4f5f7] text-gray-800"
+      }`}
+    >
       <button
         onClick={toggleTheme}
-        className="fixed top-4 right-4 p-2 bg-gray-200 dark:bg-gray-800 rounded-full shadow-md"
+        className={`fixed top-4 right-4 p-2 rounded-full shadow-md ${
+          darkMode ? "bg-gray-100 text-white" : "bg-gray-800 text-gray-900 border border-gray-300"
+        }`}
       >
         {darkMode ? "🌞" : "🌙"}
       </button>
 
-      <Navbar />
+      <Navbar darkMode={darkMode}/>
       <Home />
       <About />
       <Experience />
       <Projects />
       <ContactMe />
       <Footer />
-      
+
       <ScrollToTop
         smooth
-        className="rounded-full mr-[-20px] p-1.5 items-center justify-center shadow-md transition-all duration-300 hover:bg-[#f7f8f9] hover:scale-105 dark:hover:bg-gray-700"
+        className={`rounded-full mr-[-20px] p-1.5 items-center justify-center shadow-md transition-all duration-300 hover:scale-105 ${
+          darkMode ? "hover:bg-gray-700" : "hover:bg-[#e0e0e0]"
+        }`}
         style={{
-          backgroundColor: darkMode ? "#1395ff" : "#000",
+          backgroundColor: darkMode ? "#1395ff" : "#3b82f6",
+          color: "#ffffff",
           borderRadius: "50%",
         }}
       />
