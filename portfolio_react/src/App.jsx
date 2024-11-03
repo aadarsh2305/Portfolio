@@ -51,7 +51,7 @@ function App() {
       </button>
 
       <Navbar darkMode={darkMode}/>
-      <Home />
+      <Home darkMode={darkMode}/>
       <About />
       <Experience />
       <Projects />
