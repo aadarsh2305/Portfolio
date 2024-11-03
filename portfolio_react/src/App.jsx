@@ -9,9 +9,9 @@ import Projects from "./components/Projects/Projects";
 import ScrollToTop from "react-scroll-to-top";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
-  // Load the saved theme preference from localStorage (if available)
+  // Load the saved theme preference from localStorage
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {
@@ -35,6 +35,15 @@ function App() {
     }
   };
 
+  // Set the document class based on darkMode state
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
+
   return (
     <div
       className={`h-auto w-full overflow-hidden ${
@@ -50,12 +59,12 @@ function App() {
         {darkMode ? "🌞" : "🌙"}
       </button>
 
-      <Navbar darkMode={darkMode}/>
-      <Home darkMode={darkMode}/>
-      <About darkMode={darkMode}/>
-      <Experience darkMode={darkMode}/>
-      <Projects darkMode={darkMode}/>
-      <ContactMe darkMode={darkMode}/>
+      <Navbar darkMode={darkMode} />
+      <Home darkMode={darkMode} />
+      <About darkMode={darkMode} />
+      <Experience darkMode={darkMode} />
+      <Projects darkMode={darkMode} />
+      <ContactMe darkMode={darkMode} />
       <Footer />
 
       <ScrollToTop
