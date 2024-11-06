@@ -10,16 +10,23 @@ import ScrollToTop from "react-scroll-to-top";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
+  const [showTooltip, setShowTooltip] = useState(false);
 
-  // Load the saved theme preference from localStorage
+  // Load the saved theme preference and tooltip visibility from localStorage
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
+
+    if (savedTheme === "dark" || !savedTheme) {
       setDarkMode(true);
       document.documentElement.classList.add("dark");
     } else {
       setDarkMode(false);
       document.documentElement.classList.remove("dark");
+    }
+
+    const tooltipShown = localStorage.getItem("tooltipShown");
+    if (!tooltipShown) {
+      setShowTooltip(true);
     }
   }, []);
 
@@ -35,14 +42,10 @@ function App() {
     }
   };
 
-  // Set the document class based on darkMode state
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [darkMode]);
+  const handleTooltipClose = () => {
+    setShowTooltip(false);
+    localStorage.getItem("tooltipShown", "true");
+  };
 
   return (
     <div
@@ -53,11 +56,31 @@ function App() {
       <button
         onClick={toggleTheme}
         className={`fixed top-4 right-4 p-2 rounded-full shadow-md ${
-          darkMode ? "bg-gray-100 text-white" : "bg-gray-800 text-gray-900 border border-gray-300"
+          darkMode
+            ? "bg-gray-100 text-white"
+            : "bg-gray-800 text-gray-900 border border-gray-300"
         }`}
       >
         {darkMode ? "🌞" : "🌙"}
       </button>
+
+      {/* Tooltip with upward-pointing arrow */}
+      {showTooltip && (
+        <div className="fixed top-20 right-4 bg-gray-800 text-white p-3 rounded-lg shadow-lg animate-bounce-in z-50">
+          <div className="text-sm">You can change the theme from here</div>
+          <button
+            onClick={handleTooltipClose}
+            className="px-2 py-1 text-xs font-semibold text-gray-800 bg-blue-400 rounded-lg hover:bg-blue-500 transition duration-200"
+          >
+            Got it
+          </button>
+          {/* Upward-pointing arrow */}
+          <div
+            className="absolute -top-2 right-8 transform -translate-x-1/2 w-4 h-4 bg-gray-800 rotate-45 dark:bg-white"
+            style={{ clipPath: "polygon(30% 0%, 0% 100%, 100% 100%)" }}
+          />
+        </div>
+      )}
 
       <Navbar darkMode={darkMode} />
       <Home darkMode={darkMode} />
