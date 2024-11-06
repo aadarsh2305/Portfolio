@@ -1,5 +1,5 @@
 import React from "react";
-import avatar from '../../assets/Images/pngtree-user-profile-avatar-png-image_10211467.png';
+import avatar from '../../assets/Images/ProfilePic.jpg';
 import Typewriter from "typewriter-effect";
 import Resume from '../../assets/Doc/Resume.pdf';
 
@@ -18,6 +18,7 @@ const Home = ({ darkMode }) => {
           className={`px-5 pt-5 text-2xl md:text-4xl font-bold mb-10 ${
             darkMode ? "text-white" : "text-gray-800"
           }`}
+          style={{ minWidth: "250px", maxWidth: "100%", overflow: "hidden" }}
         >
           <Typewriter
             options={{
@@ -28,6 +29,7 @@ const Home = ({ darkMode }) => {
               ],
               autoStart: true,
               loop: true,
+              delay: 75,
             }}
           />
         </p>
@@ -44,9 +46,9 @@ const Home = ({ darkMode }) => {
           Resume
         </a>
       </div>
-      <div>
+      <div className="w-30 h-30 sm:w-40 sm:h-40 md:w-60 md:h-60 lg:w-80 lg:h-80 rounded-full overflow-hidden flex justify-center items-center">
         <img
-          className="rounded-full border-2 border-gray-300 shadow-lg"
+          className="w-full h-full object-cover rounded-full border-2 border-gray-300 shadow-lg"
           src={avatar}
           alt="profile_pic"
         />
