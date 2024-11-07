@@ -11,7 +11,8 @@ const Projects = ({ darkMode }) => {
       className={`p-10 md:p-24 ${darkMode ? "bg-[#171d32] text-white" : "bg-gray-100 text-gray-800"}`}
     >
       <h1 className="text-2xl md:text-4xl font-bold">Projects</h1>
-      <div className="py-12 px-8 flex flex-wrap gap-5"> 
+      <div className="py-12 px-7 flex flex-wrap gap-5"> 
+        
         <ProjectCard
           title="Disney-clone Website"
           main="This is a Disney website created in React js, Vite, and TailwindCSS"
@@ -36,6 +37,7 @@ const Projects = ({ darkMode }) => {
           SourceCode="https://github.com/aadarsh2305/Portfolio"
           darkMode={darkMode}
         />
+        
       </div>
     </div>
   );
