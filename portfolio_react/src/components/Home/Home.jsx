@@ -39,9 +39,9 @@ const Home = ({ darkMode }) => {
             options={{
               strings: [
                 "Full Stack Developer!",
-                "Java Developer!",
-                "MERN Stack Developer!",
-              ],
+                "Java Developer",
+                "MERN Stack!",
+              ],  
               autoStart: true,
               loop: true,
               delay: 75,

@@ -42,6 +42,15 @@ const Navbar = ({ darkMode }) => {
             Experience
           </li>
         </a>
+        <a href="#Skills">
+          <li
+            className={`text-md transition-all duration-300 p-1 md:p-0 ${
+              darkMode ? "hover:text-gray-300" : "hover:text-blue-600"
+            }`}
+          >
+            Skills
+          </li>
+        </a>
         <a href="#Projects">
           <li
             className={`text-md transition-all duration-300 p-1 md:p-0 ${
