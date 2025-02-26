@@ -76,7 +76,7 @@ const Skills = ({ darkMode }) => {
             >
               {icon}
             </span>
-            <p className="text-xs md:text-sm mt-1 font-semibold text-gray-800 dark:text-white transition duration-300 hover:text-blue-500">
+            <p className={`text-xs md:text-sm mt-1 font-semibold transition duration-300 hover:text-blue-500 ${darkMode ? "text-white" : "text-gray-800"}`}>
               {name}
             </p>
           </div>
