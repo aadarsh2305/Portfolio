@@ -60,6 +60,15 @@ const Navbar = ({ darkMode }) => {
             Projects
           </li>
         </a>
+        <a href="#DSA">
+          <li
+            className={`text-md transition-all duration-300 p-1 md:p-0 ${
+              darkMode ? "hover:text-gray-300" : "hover:text-blue-600"
+            }`}
+          >
+            DSA
+          </li>
+        </a>
         <a href="#ContactMe">
           <li
             className={`text-md transition-all duration-300 p-1 md:p-0 ${

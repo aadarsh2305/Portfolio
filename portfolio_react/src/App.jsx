@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Projects from "./components/Projects/Projects";
 import ScrollToTop from "react-scroll-to-top";
 import Skills from "./components/Skills/Skills";
+import DSASection from "./components/dsa/DSASection";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -87,6 +88,7 @@ function App() {
       <Home darkMode={darkMode} />
       <About darkMode={darkMode} />
       <Skills darkMode={darkMode} />
+      <DSASection darkMode={darkMode} />
       <Experience darkMode={darkMode} />
       <Projects darkMode={darkMode} />
       <ContactMe darkMode={darkMode} />
