@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
-import avatar from "../../assets/Images/ProfilePic.jpg";
+import avatar from "../../assets/Images/ProfilePic.png";
 import Resume from "../../assets/Doc/Resume.pdf";
 
 const Home = ({ darkMode }) => {
